@@ -18,15 +18,15 @@ model = TFBertForSequenceClassification.from_pretrained("ProsusAI/finbert", from
 
 #get news dataset
 dfNews = pd.read_csv('data/newsAMZN2yrs.csv', index_col=0)
-dfNews = dfNews[:100]
+dfNews = dfNews[:50]
 
 #tokenize text and get sentiment from FinBert model
 def sentScore(dfNews):
     df = dfNews.copy()
     
-    df['pos'] = 0.00001
-    df['neg'] = 0.00001
-    df['neut'] = 0.00001
+    df['pos'] = 0
+    df['neg'] = 0
+    df['neut'] = 0
     df['pred'] = 0
     
     MAX_LEN = 160
