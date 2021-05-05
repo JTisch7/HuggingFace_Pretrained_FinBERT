@@ -1,2 +1,2 @@
 # Financial_Sentiment_Analyzer
-Sentiment analysis using FinBert from Hugging Face Transformers
+Sentiment analysis using a fine-tuned FinBert model from Hugging Face Transformers
